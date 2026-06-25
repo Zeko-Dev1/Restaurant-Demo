@@ -1,0 +1,592 @@
+/* ==========================================================================
+   Verde Restaurant — menu-style.css
+   Menu page specific styles
+   DEMO TEMPLATE — All content is fictional placeholder data
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Menu Page — Base
+   -------------------------------------------------------------------------- */
+.menu-page {
+  background: var(--forest);
+}
+
+.menu-hero {
+  background:      var(--forest-dark);
+  padding:         calc(var(--section-pad) + 80px) 0 var(--section-pad);
+  position:        relative;
+  overflow:        hidden;
+  border-bottom:   1px solid rgba(193, 154, 75, 0.2);
+}
+
+.menu-hero::before {
+  content:    '';
+  position:   absolute;
+  inset:      0;
+  background: radial-gradient(ellipse at 60% 50%, rgba(193, 154, 75, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.menu-hero__label {
+  font-size:      0.7rem;
+  font-weight:    700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color:          var(--gold);
+  margin-bottom:  1rem;
+  display:        block;
+}
+
+.menu-hero__title {
+  font-family:  var(--font-heading);
+  font-size:    clamp(2.5rem, 5vw, 3.75rem);
+  font-weight:  300;
+  font-style:   italic;
+  color:        var(--cream);
+  line-height:  1.15;
+  margin-bottom: 1.25rem;
+}
+
+.menu-hero__desc {
+  font-size:  1rem;
+  color:      rgba(250, 246, 238, 0.65);
+  max-width:  480px;
+  line-height: 1.75;
+}
+
+/* Allergen notice */
+.allergen-notice {
+  background:    rgba(193, 154, 75, 0.08);
+  border:        1px solid rgba(193, 154, 75, 0.2);
+  border-radius: var(--radius-md);
+  padding:       1rem 1.5rem;
+  display:       flex;
+  align-items:   center;
+  gap:           0.875rem;
+  margin-top:    2rem;
+}
+
+.allergen-notice i {
+  color:      var(--gold);
+  font-size:  1rem;
+  flex-shrink: 0;
+}
+
+.allergen-notice p {
+  font-size:  0.8125rem;
+  color:      rgba(250, 246, 238, 0.65);
+  margin:     0;
+  line-height: 1.55;
+}
+
+/* --------------------------------------------------------------------------
+   Menu Layout — Sidebar + Content
+   -------------------------------------------------------------------------- */
+.menu-layout {
+  display:    grid;
+  grid-template-columns: 220px 1fr;
+  gap:        3rem;
+  max-width:  var(--container);
+  margin:     0 auto;
+  padding:    4rem 2rem;
+  align-items: start;
+}
+
+/* Sticky Sidebar Navigation */
+.menu-sidebar {
+  position: sticky;
+  top:      120px;
+}
+
+.menu-sidebar__title {
+  font-size:      0.65rem;
+  font-weight:    700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color:          var(--gold);
+  margin-bottom:  1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom:  1px solid rgba(193, 154, 75, 0.2);
+}
+
+.menu-sidebar__nav {
+  display:        flex;
+  flex-direction: column;
+  gap:            0.25rem;
+}
+
+.menu-sidebar__link {
+  font-family:    var(--font-body);
+  font-size:      0.875rem;
+  font-weight:    500;
+  color:          rgba(250, 246, 238, 0.55);
+  padding:        0.6rem 0.875rem;
+  border-radius:  var(--radius-sm);
+  border-left:    2px solid transparent;
+  transition:     color var(--t-fast), border-color var(--t-fast),
+                  background var(--t-fast);
+  text-decoration: none;
+  display:        flex;
+  align-items:    center;
+  gap:            0.5rem;
+}
+
+.menu-sidebar__link:hover,
+.menu-sidebar__link.active {
+  color:        var(--cream);
+  border-color: var(--gold);
+  background:   rgba(193, 154, 75, 0.08);
+}
+
+.menu-sidebar__link i {
+  font-size:   0.8rem;
+  color:       var(--gold);
+  opacity:     0.7;
+  flex-shrink: 0;
+}
+
+/* Mobile pill nav */
+.menu-pill-nav {
+  display:     none;
+  overflow-x:  auto;
+  padding:     1.25rem 1.25rem 0;
+  gap:         0.5rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  border-bottom: 1px solid rgba(193, 154, 75, 0.2);
+}
+
+.menu-pill-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-pill-nav .pill {
+  font-size:      0.75rem;
+  font-weight:    600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color:          rgba(250, 246, 238, 0.6);
+  padding:        0.5rem 1.25rem;
+  border-radius:  var(--radius-full);
+  border:         1px solid rgba(193, 154, 75, 0.2);
+  white-space:    nowrap;
+  transition:     background var(--t-fast), color var(--t-fast),
+                  border-color var(--t-fast);
+  text-decoration: none;
+  display:        inline-flex;
+  align-items:    center;
+  gap:            0.35rem;
+  flex-shrink:    0;
+}
+
+.menu-pill-nav .pill:hover,
+.menu-pill-nav .pill.active {
+  background:  rgba(193, 154, 75, 0.15);
+  color:       var(--gold-light);
+  border-color: var(--gold);
+}
+
+/* --------------------------------------------------------------------------
+   Menu Content Area
+   -------------------------------------------------------------------------- */
+.menu-content {
+  min-width: 0;
+}
+
+/* Course Section */
+.menu-course {
+  margin-bottom: 5rem;
+}
+
+.menu-course:last-child {
+  margin-bottom: 0;
+}
+
+/* Course Heading */
+.course-heading {
+  text-align:    center;
+  margin-bottom: 3rem;
+  position:      relative;
+}
+
+.course-heading__number {
+  font-family:    var(--font-heading);
+  font-size:      0.65rem;
+  font-weight:    600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color:          var(--gold);
+  display:        block;
+  margin-bottom:  0.5rem;
+  opacity:        0.7;
+}
+
+.course-heading__title {
+  font-family:  var(--font-heading);
+  font-size:    clamp(1.75rem, 3vw, 2.5rem);
+  font-weight:  300;
+  font-style:   italic;
+  color:        var(--cream);
+  margin-bottom: 0;
+  line-height:  1.2;
+}
+
+/* Ornamental thin line with diamond */
+.course-divider {
+  display:     flex;
+  align-items: center;
+  gap:         1rem;
+  margin:      1.25rem 0 2.5rem;
+}
+
+.course-divider::before,
+.course-divider::after {
+  content:    '';
+  flex:       1;
+  height:     1px;
+  background: linear-gradient(to right, transparent, rgba(193, 154, 75, 0.4));
+}
+
+.course-divider::after {
+  background: linear-gradient(to left, transparent, rgba(193, 154, 75, 0.4));
+}
+
+.course-divider span {
+  color:      var(--gold);
+  font-size:  0.5rem;
+  opacity:    0.7;
+}
+
+/* --------------------------------------------------------------------------
+   Menu Item Row
+   -------------------------------------------------------------------------- */
+.menu-item {
+  display:         grid;
+  grid-template-columns: 1fr auto;
+  gap:             1.5rem;
+  padding:         1.5rem 0;
+  border-bottom:   1px solid rgba(193, 154, 75, 0.12);
+  align-items:     start;
+  transition:      background var(--t-fast);
+}
+
+.menu-item:first-child {
+  border-top: 1px solid rgba(193, 154, 75, 0.12);
+}
+
+.menu-item:hover {
+  background:    rgba(193, 154, 75, 0.03);
+  border-radius: var(--radius-sm);
+}
+
+.menu-item__info {
+  min-width: 0;
+}
+
+.menu-item__name {
+  font-family:   var(--font-heading);
+  font-size:     1.125rem;
+  font-weight:   400;
+  font-style:    italic;
+  color:         var(--cream);
+  margin-bottom: 0.35rem;
+  line-height:   1.3;
+}
+
+.menu-item__desc {
+  font-size:  0.85rem;
+  color:      rgba(250, 246, 238, 0.5);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.menu-item__badges {
+  display:  flex;
+  flex-wrap: wrap;
+  gap:      0.35rem;
+  margin-top: 0.5rem;
+}
+
+.menu-item__price {
+  font-family:    var(--font-heading);
+  font-size:      1.125rem;
+  font-weight:    400;
+  color:          var(--gold);
+  white-space:    nowrap;
+  padding-top:    0.15rem;
+}
+
+/* --------------------------------------------------------------------------
+   Allergen Badges
+   -------------------------------------------------------------------------- */
+.badge-allergen {
+  display:        inline-flex;
+  align-items:    center;
+  gap:            0.25rem;
+  font-size:      0.65rem;
+  font-weight:    600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding:        0.2rem 0.6rem;
+  border-radius:  var(--radius-full);
+  line-height:    1.4;
+}
+
+.badge-veg {
+  background: rgba(79, 122, 94, 0.15);
+  color:      #7FB89B;
+  border:     1px solid rgba(79, 122, 94, 0.3);
+}
+
+.badge-vegan {
+  background: rgba(79, 122, 94, 0.2);
+  color:      #9FD4B4;
+  border:     1px solid rgba(79, 122, 94, 0.4);
+}
+
+.badge-gf {
+  background: rgba(193, 154, 75, 0.12);
+  color:      var(--gold-light);
+  border:     1px solid rgba(193, 154, 75, 0.25);
+}
+
+.badge-spicy {
+  background: rgba(166, 69, 58, 0.12);
+  color:      #D4766E;
+  border:     1px solid rgba(166, 69, 58, 0.25);
+}
+
+.badge-new {
+  background: rgba(46, 82, 64, 0.3);
+  color:      var(--gold-light);
+  border:     1px solid rgba(193, 154, 75, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   Wine Pairing Suggestion Box
+   -------------------------------------------------------------------------- */
+.wine-pairing-box {
+  background:    rgba(193, 154, 75, 0.06);
+  border-left:   3px solid var(--gold);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding:       1.25rem 1.5rem;
+  margin:        2rem 0;
+}
+
+.wine-pairing-box__label {
+  font-size:      0.65rem;
+  font-weight:    700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color:          var(--gold);
+  margin-bottom:  0.5rem;
+  display:        flex;
+  align-items:    center;
+  gap:            0.4rem;
+}
+
+.wine-pairing-box__text {
+  font-family:  var(--font-heading);
+  font-size:    0.975rem;
+  font-style:   italic;
+  color:        rgba(250, 246, 238, 0.7);
+  line-height:  1.65;
+  margin:       0;
+}
+
+/* --------------------------------------------------------------------------
+   Print Button
+   -------------------------------------------------------------------------- */
+.print-menu-btn {
+  display:     inline-flex;
+  align-items: center;
+  gap:         0.5rem;
+  font-size:   0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color:       rgba(250, 246, 238, 0.5);
+  background:  transparent;
+  border:      1px solid rgba(250, 246, 238, 0.15);
+  border-radius: var(--radius-sm);
+  padding:     0.5rem 1rem;
+  transition:  color var(--t-fast), border-color var(--t-fast);
+  cursor:      pointer;
+}
+
+.print-menu-btn:hover {
+  color:        var(--gold);
+  border-color: rgba(193, 154, 75, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   Menu — Wine & Bar Section
+   -------------------------------------------------------------------------- */
+.wine-bar-section {
+  background:    rgba(20, 40, 34, 0.5);
+  border:        1px solid rgba(193, 154, 75, 0.15);
+  border-radius: var(--radius-lg);
+  padding:       3rem;
+  margin-top:    2rem;
+}
+
+.wine-bar-section .wine-highlight {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  gap:             3rem;
+  flex-wrap:       wrap;
+  margin-top:      2rem;
+  padding-top:     2rem;
+  border-top:      1px solid rgba(193, 154, 75, 0.15);
+}
+
+.wine-highlight__item {
+  text-align: center;
+}
+
+.wine-highlight__number {
+  font-family:  var(--font-heading);
+  font-size:    2.5rem;
+  font-weight:  300;
+  font-style:   italic;
+  color:        var(--gold-light);
+  line-height:  1;
+}
+
+.wine-highlight__label {
+  font-size:      0.7rem;
+  font-weight:    600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color:          rgba(250, 246, 238, 0.45);
+  margin-top:     0.35rem;
+}
+
+/* --------------------------------------------------------------------------
+   Dietary info section
+   -------------------------------------------------------------------------- */
+.dietary-section {
+  background:    rgba(46, 82, 64, 0.2);
+  border:        1px solid rgba(193, 154, 75, 0.15);
+  border-radius: var(--radius-lg);
+  padding:       2.5rem;
+  margin-top:    4rem;
+}
+
+.dietary-grid {
+  display:               grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap:                   1.5rem;
+  margin-top:            1.5rem;
+}
+
+.dietary-item {
+  display:     flex;
+  align-items: center;
+  gap:         0.75rem;
+}
+
+.dietary-item__badge {
+  flex-shrink: 0;
+}
+
+.dietary-item__text {
+  font-size:  0.85rem;
+  color:      rgba(250, 246, 238, 0.6);
+  line-height: 1.45;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Menu
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .menu-layout {
+    grid-template-columns: 1fr;
+    padding:               2rem 1.25rem;
+    gap:                   2rem;
+  }
+
+  .menu-sidebar {
+    display:  none;
+  }
+
+  .menu-pill-nav {
+    display: flex;
+  }
+
+  .wine-bar-section {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .menu-item {
+    gap: 1rem;
+  }
+
+  .menu-item__name {
+    font-size: 1rem;
+  }
+
+  .course-heading__title {
+    font-size: 1.625rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Print Styles
+   -------------------------------------------------------------------------- */
+@media print {
+  .verde-navbar,
+  .menu-sidebar,
+  .menu-pill-nav,
+  .verde-footer,
+  .print-menu-btn,
+  .back-to-top,
+  .cookie-banner,
+  #page-loader {
+    display: none !important;
+  }
+
+  .menu-page {
+    background: white;
+  }
+
+  .menu-hero {
+    background:    white;
+    padding-top:   2rem;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .menu-hero__title,
+  .course-heading__title,
+  .menu-item__name {
+    color: #1F3A2E;
+  }
+
+  .menu-item__desc,
+  .allergen-notice p {
+    color: #5C6359;
+  }
+
+  .menu-item__price,
+  .section-label,
+  .course-heading__number {
+    color: #9C7A35;
+  }
+
+  .menu-layout {
+    grid-template-columns: 1fr;
+    padding:               1rem;
+  }
+
+  .menu-item {
+    border-color: #E8DCC4;
+  }
+
+  .course-divider::before,
+  .course-divider::after {
+    background: #C19A4B;
+  }
+}

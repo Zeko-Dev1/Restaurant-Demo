@@ -1,0 +1,430 @@
+﻿<!DOCTYPE html>
+<!-- DEMO TEMPLATE — All content, times, and form submissions are simulated placeholder data for demonstration purposes only. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Reserve a table at Verde — our online booking system with real-time availability based on our opening hours." />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Reservations — Verde Restaurant</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+</head>
+<body>
+
+<div id="page-loader" aria-hidden="true"><span class="loader-wordmark">Verde</span><span class="loader-line"></span></div>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- NAVBAR -->
+<nav class="verde-navbar nav-top" role="navigation" aria-label="Main navigation">
+  <div class="navbar-inner">
+    <a href="index.html" class="nav-wordmark">Verde</a>
+    <div class="nav-links">
+      <a href="index.html"          class="nav-link-item" data-i18n="nav.home">Home</a>
+      <a href="menu.html"           class="nav-link-item" data-i18n="nav.menu">Menu</a>
+      <a href="about.html"          class="nav-link-item" data-i18n="nav.about">About</a>
+      <a href="private-dining.html" class="nav-link-item" data-i18n="nav.private">Private Dining</a>
+      <a href="events.html"         class="nav-link-item" data-i18n="nav.events">Events</a>
+      <a href="gallery.html"        class="nav-link-item" data-i18n="nav.gallery">Gallery</a>
+      <a href="press.html"          class="nav-link-item" data-i18n="nav.press">Press</a>
+      <a href="contact.html"        class="nav-link-item" data-i18n="nav.contact">Contact</a>
+    </div>
+    <a href="#booking-form" class="nav-reserve-btn" data-i18n="nav.reserve">Reserve A Table</a>
+    <div class="lang-switcher" role="group" aria-label="Language selector">
+      <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+      <button class="lang-btn" data-lang="sq" aria-pressed="false">SQ</button>
+      <button class="lang-btn" data-lang="mk" aria-pressed="false">MK</button>
+    </div>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <a href="index.html"          class="mobile-link" data-i18n="nav.home">Home</a>
+  <a href="menu.html"           class="mobile-link" data-i18n="nav.menu">Menu</a>
+  <a href="about.html"          class="mobile-link" data-i18n="nav.about">About</a>
+  <a href="private-dining.html" class="mobile-link" data-i18n="nav.private">Private Dining</a>
+  <a href="events.html"         class="mobile-link" data-i18n="nav.events">Events</a>
+  <a href="gallery.html"        class="mobile-link" data-i18n="nav.gallery">Gallery</a>
+  <a href="press.html"          class="mobile-link" data-i18n="nav.press">Press</a>
+  <a href="contact.html"        class="mobile-link" data-i18n="nav.contact">Contact</a>
+  <div class="mobile-lang-switcher" role="group" aria-label="Language selector">
+    <button class="mobile-lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+    <button class="mobile-lang-btn" data-lang="sq" aria-pressed="false">SQ</button>
+    <button class="mobile-lang-btn" data-lang="mk" aria-pressed="false">MK</button>
+  </div>
+  <a href="#booking-form" class="btn-verde btn-primary-verde mobile-reserve mt-4" data-i18n="nav.reserve">Reserve A Table</a>
+</div>
+
+<!-- HERO -->
+<section class="page-hero" style="background:var(--forest);">
+  <div class="page-hero__inner">
+    <div data-aos="fade-up">
+      <span class="section-label">Reservations</span>
+      <h1 style="color:var(--cream);">Reserve your table<br />at Verde</h1>
+      <div class="gold-line gold-line--center"></div>
+      <p class="lead" style="color:rgba(250,246,238,0.7);max-width:500px;margin:1.25rem auto 0;">
+        We open Tuesday through Sunday. Monday we rest. Select your date and we'll find you the perfect seat.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- INFO CARDS + HOURS -->
+<section class="section-pad-sm bg-cream">
+  <div class="container-verde">
+    <div class="res-info-grid stagger-grid">
+
+      <div class="res-info-card">
+        <div class="res-info-card__icon"><i class="bi bi-clock"></i></div>
+        <h5>Opening Hours</h5>
+        <p>Tue–Thu: 6:00 PM – 11:00 PM<br />Fri–Sat: 5:30 PM – 12:00 AM<br />Sun: 12:00 PM – 4:00 PM &amp; 6:00 PM – 10:00 PM<br /><strong>Monday: Closed</strong></p>
+        <!-- PLACEHOLDER hours -->
+      </div>
+
+      <div class="res-info-card">
+        <div class="res-info-card__icon"><i class="bi bi-people"></i></div>
+        <h5>Group Bookings</h5>
+        <p>For parties of 10 or more guests, please call us directly or enquire about our <a href="private-dining.html">private dining</a> options. We will gladly accommodate you.</p>
+      </div>
+
+      <div class="res-info-card">
+        <div class="res-info-card__icon"><i class="bi bi-calendar-x"></i></div>
+        <h5>Cancellations</h5>
+        <p>We ask for 24 hours' notice for cancellations. For same-day cancellations, please call us directly rather than cancelling online.</p>
+      </div>
+
+      <div class="res-info-card">
+        <div class="res-info-card__icon"><i class="bi bi-telephone"></i></div>
+        <h5>Prefer to Call?</h5>
+        <p>Our team is available during opening hours to take reservations by phone. <a href="contact.html">[Sample Phone — Placeholder]</a></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.res-info-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; }
+.res-info-card {
+  background: var(--white); border-radius: var(--radius-lg); padding: 2rem 1.5rem;
+  border: 1px solid var(--cream-dark); box-shadow: var(--shadow-card);
+  transition: border-color var(--t-base);
+}
+.res-info-card:hover { border-color: rgba(193,154,75,0.3); }
+.res-info-card__icon { font-size: 1.5rem; color: var(--gold); margin-bottom: 0.875rem; display: block; }
+.res-info-card h5 { color: var(--forest); margin-bottom: 0.5rem; font-size: 1rem; }
+.res-info-card p { font-size: 0.875rem; color: var(--text-secondary); margin: 0; line-height: 1.65; }
+.res-info-card a { color: var(--gold); }
+@media (max-width: 991.98px) { .res-info-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 575.98px) { .res-info-grid { grid-template-columns: 1fr; } }
+</style>
+
+<!-- BOOKING FORM + STATUS -->
+<section class="section-pad" style="background:var(--cream-dark);" id="booking-form">
+  <div class="container-verde">
+    <div class="booking-layout">
+
+      <!-- Form -->
+      <div class="booking-form-wrap" data-aos="fade-right">
+        <div class="reserve-widget">
+          <div class="reserve-widget__title">Make a Reservation</div>
+          <p class="reserve-widget__subtitle">Fill in your details below. Your booking is confirmed once you receive a confirmation number.</p>
+
+          <!-- Confirmation goes here -->
+          <div id="res-confirmation" style="display:none;"></div>
+
+          <form id="reservation-form" class="verde-form" novalidate aria-label="Reservation form">
+
+            <!-- Step 1: Date / Time / Guests -->
+            <div class="form-section">
+              <div class="form-section__label">01 — When &amp; How Many</div>
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <label class="form-label" for="res-date">Date *</label>
+                  <input type="date" class="form-control" id="res-date" name="date" required />
+                  <div class="invalid-feedback"></div>
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label" for="res-time">Time *</label>
+                  <select class="form-select" id="res-time" name="time" required disabled>
+                    <option value="">Select a date first</option>
+                  </select>
+                  <div class="invalid-feedback"></div>
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label" for="res-guests">Guests *</label>
+                  <select class="form-select" id="res-guests" name="guests" required>
+                    <option value="">Select</option>
+                  </select>
+                  <div class="invalid-feedback"></div>
+                </div>
+              </div>
+
+              <!-- 10+ guest note -->
+              <div id="res-guest-note" style="display:none;margin-top:1rem;" class="alert-verde">
+                <i class="bi bi-telephone-fill"></i>
+                For parties of 10 or more, please <a href="contact.html">call us directly</a> or enquire about <a href="private-dining.html">private dining</a>.
+              </div>
+            </div>
+
+            <!-- Step 2: Contact -->
+            <div class="form-section">
+              <div class="form-section__label">02 — Your Details</div>
+              <div class="row g-3">
+                <div class="col-12">
+                  <label class="form-label" for="res-name">Full Name *</label>
+                  <input type="text" class="form-control" id="res-name" name="name" required minlength="2" placeholder="Your full name" />
+                  <div class="invalid-feedback"></div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="res-email">Email Address *</label>
+                  <input type="email" class="form-control" id="res-email" name="email" required placeholder="your@email.com" />
+                  <div class="invalid-feedback"></div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="res-phone">Phone Number *</label>
+                  <input type="tel" class="form-control" id="res-phone" name="phone" required data-validate="phone" placeholder="+1 000 000 0000" />
+                  <div class="invalid-feedback"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Occasion -->
+            <div class="form-section">
+              <div class="form-section__label">03 — Occasion (Optional)</div>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="res-occasion">Special Occasion</label>
+                  <select class="form-select" id="res-occasion" name="occasion">
+                    <option value="">None — regular dinner</option>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Anniversary">Anniversary</option>
+                    <option value="Business Dinner">Business Dinner</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="col-md-6" id="res-occasion-extra" style="display:none;">
+                  <label class="form-label" for="res-occasion-detail">Additional Details</label>
+                  <input type="text" class="form-control" id="res-occasion-detail" name="occasion_detail" placeholder="Tell us more..." />
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="res-notes">Dietary Requirements or Special Requests</label>
+                  <textarea class="form-control" id="res-notes" name="notes" rows="3" placeholder="Any allergies, dietary requirements, or requests for your visit..."></textarea>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-verde btn-primary-verde btn-verde-lg w-100 mt-2">
+              <span class="btn-text" data-i18n="btn.confirm-reservation">Confirm Reservation</span>
+              <span class="btn-spinner" aria-hidden="true"></span>
+            </button>
+
+            <p style="font-size:0.775rem;color:var(--text-light);text-align:center;margin-top:1rem;">
+              <i class="bi bi-shield-check"></i>
+              Your details are private and secure. This is a simulated reservation for demonstration — connect to real booking platform before launch.
+            </p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Sidebar: Hours + Status -->
+      <aside class="booking-sidebar" data-aos="fade-left" data-aos-delay="100">
+
+        <!-- Status -->
+        <div class="booking-status-card">
+          <div class="booking-status-card__label">Current Status</div>
+          <div class="js-hero-status" aria-live="polite" style="margin-top:0.5rem;"></div>
+        </div>
+
+        <!-- Hours Table -->
+        <div class="booking-hours-card">
+          <div class="booking-hours-card__title">Opening Hours</div>
+          <div class="booking-hours-table">
+            <div class="hours-row" data-aos="fade-up">
+              <div class="bht-row"><span data-day="Tuesday" data-i18n="footer.tue-thu">Tuesday</span><span>6:00 PM – 11:00 PM</span></div>
+              <div class="bht-row"><span data-day="Wednesday">Wednesday</span><span>6:00 PM – 11:00 PM</span></div>
+              <div class="bht-row"><span data-day="Thursday">Thursday</span><span>6:00 PM – 11:00 PM</span></div>
+              <div class="bht-row"><span data-day="Friday" data-i18n="footer.fri-sat">Friday</span><span>5:30 PM – 12:00 AM</span></div>
+              <div class="bht-row"><span data-day="Saturday">Saturday</span><span>5:30 PM – 12:00 AM</span></div>
+              <div class="bht-row"><span data-day="Sunday" data-i18n="footer.sunday">Sunday</span><span>12:00–4:00 PM · 6:00–10:00 PM</span></div>
+              <div class="bht-row bht-closed"><span data-day="Monday" data-i18n="footer.monday">Monday</span><span data-i18n="footer.closed">Closed</span></div>
+            </div>
+          </div>
+          <p style="font-size:0.775rem;color:var(--text-light);margin-top:0.875rem;font-style:italic;"><!-- PLACEHOLDER hours — replace with real schedule --></p>
+        </div>
+
+        <!-- Call Us -->
+        <div class="booking-call-card">
+          <i class="bi bi-telephone-fill"></i>
+          <div>
+            <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.25rem;">Prefer to call?</div>
+            <div style="font-family:var(--font-heading);font-style:italic;font-size:1.0625rem;color:var(--cream);">[Sample Phone — Placeholder]</div>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+</section>
+
+<style>
+.form-section { margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--cream-dark); }
+.form-section:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.form-section__label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; display: block; }
+.alert-verde {
+  background: rgba(193,154,75,0.08); border: 1px solid rgba(193,154,75,0.25); border-radius: var(--radius-sm);
+  padding: 0.875rem 1.125rem; font-size: 0.875rem; color: var(--text-secondary);
+  display: flex; align-items: center; gap: 0.625rem;
+}
+.alert-verde i { color: var(--gold); flex-shrink: 0; }
+.alert-verde a { color: var(--gold); }
+.booking-layout { display: grid; grid-template-columns: 1fr 320px; gap: 3rem; align-items: start; }
+.booking-status-card {
+  background: var(--forest); border-radius: var(--radius-lg); padding: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+.booking-status-card__label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.35rem; }
+.booking-hours-card {
+  background: var(--white); border-radius: var(--radius-lg); padding: 1.5rem;
+  border: 1px solid var(--cream-dark); margin-bottom: 1.25rem;
+}
+.booking-hours-card__title { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 1rem; }
+.bht-row { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-secondary); padding: 0.5rem 0; border-bottom: 1px solid var(--cream-dark); }
+.bht-row:last-child { border-bottom: none; }
+.bht-row span:first-child { font-weight: 500; color: var(--text-primary); }
+.bht-closed span { color: var(--text-light); }
+.hours-row .bht-row.today span { color: var(--gold); font-weight: 600; }
+.booking-call-card {
+  background: var(--forest); border-radius: var(--radius-lg); padding: 1.5rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.booking-call-card i { font-size: 1.25rem; color: var(--gold); flex-shrink: 0; }
+@media (max-width: 1023.98px) { .booking-layout { grid-template-columns: 1fr; } .booking-sidebar { order: -1; } }
+</style>
+
+<!-- POLICIES -->
+<section class="section-pad bg-cream" id="policies">
+  <div class="container-narrow">
+    <div class="section-header section-header--center mb-4" data-aos="fade-up">
+      <span class="section-label">Reservation Policies</span>
+      <h3>What to know before you book</h3>
+      <div class="gold-line gold-line--center"></div>
+    </div>
+
+    <div class="policies-grid stagger-grid">
+      <div class="policy-item" data-aos="fade-up">
+        <i class="bi bi-clock-history"></i>
+        <h5>Table Hold Time</h5>
+        <p>We hold your table for 15 minutes from your booking time. If you're running late, please call us so we can accommodate you.</p>
+      </div>
+      <div class="policy-item" data-aos="fade-up" data-aos-delay="80">
+        <i class="bi bi-calendar-x"></i>
+        <h5>Cancellations</h5>
+        <p>Please cancel or modify at least 24 hours in advance. Same-day cancellations should be made by phone.</p>
+      </div>
+      <div class="policy-item" data-aos="fade-up" data-aos-delay="160">
+        <i class="bi bi-people"></i>
+        <h5>Large Groups</h5>
+        <p>For 10+ guests, please call directly or enquire about our private dining options. We'll take good care of you.</p>
+      </div>
+      <div class="policy-item" data-aos="fade-up" data-aos-delay="240">
+        <i class="bi bi-egg"></i>
+        <h5>Dietary Requirements</h5>
+        <p>Please note any dietary requirements in your booking. We'll inform the kitchen before your arrival to ensure a great experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.policies-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2rem; }
+.policy-item { background: var(--white); border-radius: var(--radius-lg); padding: 2rem; border: 1px solid var(--cream-dark); }
+.policy-item i { font-size: 1.5rem; color: var(--gold); display: block; margin-bottom: 0.875rem; }
+.policy-item h5 { color: var(--forest); margin-bottom: 0.5rem; }
+.policy-item p { font-size: 0.875rem; color: var(--text-secondary); margin: 0; }
+@media (max-width: 575.98px) { .policies-grid { grid-template-columns: 1fr; } }
+</style>
+
+<!-- FOOTER -->
+<footer class="verde-footer" role="contentinfo">
+  <div class="container-verde">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="footer-wordmark">Verde</a>
+        <p class="footer-tagline">Modern Cooking, Honest Ingredients.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="footer-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading" data-i18n="footer.navigate">Navigate</div>
+        <nav class="footer-links">
+          <a href="index.html"          class="footer-link"><i class="bi bi-chevron-right"></i> Home</a>
+          <a href="menu.html"           class="footer-link"><i class="bi bi-chevron-right"></i> Menu</a>
+          <a href="about.html"          class="footer-link"><i class="bi bi-chevron-right"></i> About</a>
+          <a href="private-dining.html" class="footer-link"><i class="bi bi-chevron-right"></i> Private Dining</a>
+          <a href="events.html"         class="footer-link"><i class="bi bi-chevron-right"></i> Events</a>
+          <a href="contact.html"        class="footer-link"><i class="bi bi-chevron-right"></i> Contact</a>
+        </nav>
+      </div>
+      <div>
+        <div class="footer-heading">Hours</div>
+        <div class="footer-hours-row" data-day-check="Tuesday"><span>Tue – Thu</span><span>6:00 – 11:00 PM</span></div>
+        <div class="footer-hours-row" data-day-check="Friday"><span>Fri – Sat</span><span>5:30 PM – 12:00 AM</span></div>
+        <div class="footer-hours-row" data-day-check="Sunday"><span>Sunday</span><span>12:00 – 10:00 PM</span></div>
+        <div class="footer-hours-row" data-day-check="Monday"><span>Monday</span><span>Closed</span></div>
+      </div>
+      <div>
+        <div class="footer-heading">Contact</div>
+        <div class="footer-contact-item"><i class="bi bi-geo-alt footer-contact-icon"></i><span class="footer-contact-text">[Sample Address — Placeholder]</span></div>
+        <div class="footer-contact-item"><i class="bi bi-telephone footer-contact-icon"></i><span class="footer-contact-text">[Sample Phone — Placeholder]</span></div>
+        <div class="footer-contact-item"><i class="bi bi-envelope footer-contact-icon"></i><span class="footer-contact-text">hello@verderestaurant.com</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copyright">© <span class="current-year"></span> Verde Restaurant.</span>
+      <p class="footer-disclaimer"><em>Demo template — all reservation data is simulated and not connected to a real booking system.</em></p>
+      <div class="footer-legal-links"><a href="#" class="footer-legal-link">Privacy</a><a href="contact.html" class="footer-legal-link">Contact</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+<div class="cookie-banner hidden" role="region" aria-label="Cookie consent">
+  <p>We use cookies for the best experience. <a href="#" style="color:var(--gold-light);" data-i18n="cookie.learn">Learn more</a></p>
+  <div class="cookie-actions">
+    <button class="btn-verde btn-secondary-verde btn-verde-sm js-cookie-decline" data-i18n="cookie.decline">Decline</button>
+    <button class="btn-verde btn-primary-verde btn-verde-sm js-cookie-accept" data-i18n="cookie.accept">Accept</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/reservation.js"></script>
+
+<script>
+// Highlight today's hours row in booking sidebar
+(function() {
+  const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const today = dayNames[new Date().getDay()];
+  document.querySelectorAll('.bht-row [data-day]').forEach(span => {
+    if (span.dataset.day === today) {
+      span.closest('.bht-row').style.color = 'var(--gold)';
+      span.closest('.bht-row').style.fontWeight = '600';
+    }
+  });
+})();
+</script>
+<script src="assets/js/translations.js"></script>
+</body>
+</html>

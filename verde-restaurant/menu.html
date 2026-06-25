@@ -1,0 +1,490 @@
+﻿<!DOCTYPE html>
+<!-- DEMO TEMPLATE — All menu items, prices, and descriptions are fictional placeholders for demonstration purposes only. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Verde Menu — Seasonal starters, mains, and desserts. Modern European cuisine with Mediterranean influence. Chef Marko Ilievski." />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Menu — Verde Restaurant</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/menu-style.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+</head>
+<body class="menu-page">
+
+<div id="page-loader" aria-hidden="true">
+  <span class="loader-wordmark">Verde</span>
+  <span class="loader-line"></span>
+</div>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- NAVBAR -->
+<nav class="verde-navbar verde-navbar--light nav-top" role="navigation" aria-label="Main navigation">
+  <div class="navbar-inner">
+    <a href="index.html" class="nav-wordmark">Verde</a>
+    <div class="nav-links">
+      <a href="index.html"          class="nav-link-item" data-i18n="nav.home">Home</a>
+      <a href="menu.html"           class="nav-link-item active" data-i18n="nav.menu">Menu</a>
+      <a href="about.html"          class="nav-link-item" data-i18n="nav.about">About</a>
+      <a href="private-dining.html" class="nav-link-item" data-i18n="nav.private">Private Dining</a>
+      <a href="events.html"         class="nav-link-item" data-i18n="nav.events">Events</a>
+      <a href="gallery.html"        class="nav-link-item" data-i18n="nav.gallery">Gallery</a>
+      <a href="press.html"          class="nav-link-item" data-i18n="nav.press">Press</a>
+      <a href="contact.html"        class="nav-link-item" data-i18n="nav.contact">Contact</a>
+    </div>
+    <a href="reservations.html" class="nav-reserve-btn" data-i18n="nav.reserve">Reserve A Table</a>
+    <div class="lang-switcher" role="group" aria-label="Language selector">
+      <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+      <button class="lang-btn" data-lang="sq" aria-pressed="false">SQ</button>
+      <button class="lang-btn" data-lang="mk" aria-pressed="false">MK</button>
+    </div>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <a href="index.html"          class="mobile-link" data-i18n="nav.home">Home</a>
+  <a href="menu.html"           class="mobile-link active" data-i18n="nav.menu">Menu</a>
+  <a href="about.html"          class="mobile-link" data-i18n="nav.about">About</a>
+  <a href="private-dining.html" class="mobile-link" data-i18n="nav.private">Private Dining</a>
+  <a href="events.html"         class="mobile-link" data-i18n="nav.events">Events</a>
+  <a href="gallery.html"        class="mobile-link" data-i18n="nav.gallery">Gallery</a>
+  <a href="press.html"          class="mobile-link" data-i18n="nav.press">Press</a>
+  <a href="contact.html"        class="mobile-link" data-i18n="nav.contact">Contact</a>
+  <div class="mobile-lang-switcher" role="group" aria-label="Language selector">
+    <button class="mobile-lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+    <button class="mobile-lang-btn" data-lang="sq" aria-pressed="false">SQ</button>
+    <button class="mobile-lang-btn" data-lang="mk" aria-pressed="false">MK</button>
+  </div>
+  <a href="reservations.html"   class="btn-verde btn-primary-verde mobile-reserve mt-4" data-i18n="nav.reserve">Reserve A Table</a>
+</div>
+
+<!-- MENU HERO -->
+<header class="menu-hero" id="menu-top">
+  <div class="container-verde">
+    <div class="d-flex justify-content-between align-items-start flex-wrap gap-3">
+      <div data-aos="fade-up">
+        <span class="menu-hero__label" data-i18n="menu.label">Verde · Seasonal Menu</span>
+        <h1 class="menu-hero__title" data-i18n="menu.title">The Menu</h1>
+        <p class="menu-hero__desc" data-i18n="menu.lead">
+          Driven by what grows well and what tastes right. Our menu is written weekly — this is our current selection.
+          <!-- PLACEHOLDER — replace with real seasonal menu before presenting -->
+        </p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <button class="print-menu-btn" onclick="window.print()" aria-label="Print menu">
+          <i class="bi bi-printer"></i> <span data-i18n="btn.print-menu">Print Menu</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="allergen-notice" data-aos="fade-up" data-aos-delay="150">
+      <i class="bi bi-info-circle-fill"></i>
+      <p>Please inform your server of any allergies or dietary requirements before ordering. Our kitchen handles nuts, gluten, dairy, shellfish, and other common allergens. Menus are subject to change without notice based on seasonal availability. <strong>All items listed are placeholder sample data for demonstration.</strong></p>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Pill Nav -->
+<nav class="menu-pill-nav" aria-label="Menu sections">
+  <a href="#starters"  class="pill active"><i class="bi bi-flower2"></i> Starters</a>
+  <a href="#mains"     class="pill"><i class="bi bi-egg-fried"></i> Mains</a>
+  <a href="#desserts"  class="pill"><i class="bi bi-cup-hot"></i> Desserts</a>
+  <a href="#wine-bar"  class="pill"><i class="bi bi-cup-straw"></i> Wine &amp; Bar</a>
+</nav>
+
+<!-- MENU LAYOUT: Sidebar + Content -->
+<div class="menu-layout">
+
+  <!-- Sidebar -->
+  <aside class="menu-sidebar" aria-label="Menu navigation">
+    <div class="menu-sidebar__title">Menu Sections</div>
+    <nav class="menu-sidebar__nav">
+      <a href="#starters"  class="menu-sidebar__link active"><i class="bi bi-flower2"></i> Starters</a>
+      <a href="#mains"     class="menu-sidebar__link"><i class="bi bi-egg-fried"></i> Mains</a>
+      <a href="#desserts"  class="menu-sidebar__link"><i class="bi bi-cup-hot"></i> Desserts</a>
+      <a href="#wine-bar"  class="menu-sidebar__link"><i class="bi bi-cup-straw"></i> Wine &amp; Bar</a>
+    </nav>
+
+    <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(193,154,75,0.2);">
+      <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">Dietary Key</div>
+      <div style="display:flex;flex-direction:column;gap:0.6rem;">
+        <div style="display:flex;align-items:center;gap:0.5rem;">
+          <span class="badge-allergen badge-veg">V</span><span style="font-size:0.8rem;color:rgba(250,246,238,0.55);">Vegetarian</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.5rem;">
+          <span class="badge-allergen badge-vegan">VE</span><span style="font-size:0.8rem;color:rgba(250,246,238,0.55);">Vegan</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.5rem;">
+          <span class="badge-allergen badge-gf">GF</span><span style="font-size:0.8rem;color:rgba(250,246,238,0.55);">Gluten Free</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:2rem;">
+      <a href="reservations.html" class="btn-verde btn-secondary-verde btn-verde-sm" style="display:flex;justify-content:center;" data-i18n="btn.reserve">Reserve A Table</a>
+    </div>
+  </aside>
+
+  <!-- Menu Content -->
+  <main class="menu-content" id="menu-content">
+
+    <!-- ====== STARTERS ====== -->
+    <section class="menu-course" id="starters" aria-label="Starters">
+      <div class="course-heading" data-aos="fade-up">
+        <span class="course-heading__number">01</span>
+        <h2 class="course-heading__title">Starters</h2>
+      </div>
+      <div class="course-divider"><span>◆</span></div>
+
+      <div data-aos="fade-up" data-aos-delay="50">
+        <div class="menu-item">
+          <div class="menu-item__info">
+            <div class="menu-item__name">Burrata &amp; Heirloom Tomato</div>
+            <div class="menu-item__desc">Basil oil, aged balsamic, sea salt, crostini</div>
+            <div class="menu-item__badges">
+              <span class="badge-allergen badge-veg">V</span>
+              <span class="badge-allergen badge-gf">GF</span>
+            </div>
+          </div>
+          <div class="menu-item__price">$16</div>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="80">
+        <div class="menu-item">
+          <div class="menu-item__info">
+            <div class="menu-item__name">Grilled Octopus</div>
+            <div class="menu-item__desc">Smoked paprika, fingerling potato, lemon</div>
+            <div class="menu-item__badges">
+              <span class="badge-allergen badge-gf">GF</span>
+            </div>
+          </div>
+          <div class="menu-item__price">$19</div>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="110">
+        <div class="menu-item">
+          <div class="menu-item__info">
+            <div class="menu-item__name">Roasted Beet Salad</div>
+            <div class="menu-item__desc">Goat cheese, candied walnuts, citrus vinaigrette</div>
+            <div class="menu-item__badges">
+              <span class="badge-allergen badge-veg">V</span>
+              <span class="badge-allergen badge-gf">GF</span>
+            </div>
+          </div>
+          <div class="menu-item__price">$14</div>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="140">
+        <div class="menu-item">
+          <div class="menu-item__info">
+            <div class="menu-item__name">Soup of the Day</div>
+            <div class="menu-item__desc">Ask your server for today's selection</div>
+            <div class="menu-item__badges">
+              <span class="badge-allergen badge-veg">V</span>
+              <span class="badge-allergen badge-new">Daily</span>
+            </div>
+          </div>
+          <div class="menu-item__price">$11</div>
+        </div>
+      </div>
+
+      <div class="wine-pairing-box" data-aos="fade-up" data-aos-delay="160">
+        <div class="wine-pairing-box__label"><i class="bi bi-cup-straw"></i> Wine Pairing Suggestion</div>
+        <p class="wine-pairing-box__text">Our burrata and beet salad pair beautifully with a chilled Vermentino or a light natural Pinot Gris from our current list. Ask Ana to suggest a glass.</p>
+      </div>
+    </section>
+
+    <!-- ====== MAINS ====== -->
+    <section class="menu-course" id="mains" aria-label="Main courses">
+      <div class="course-heading" data-aos="fade-up">
+        <span class="course-heading__number">02</span>
+        <h2 class="course-heading__title">Mains</h2>
+      </div>
+      <div class="course-divider"><span>◆</span></div>
+
+      <div data-aos="fade-up">
+        <div class="menu-item">
+          <div class="menu-item__info">
+            <div class="menu-item__name">Herb-Crusted Lamb Rack</div>
+            <div class="menu-item__desc">Rosemary jus, roasted root vegetables</div>
+            <div class="menu-item__badges">
+              <span class="badge-allergen badge-gf">GF</span>
+            </div>
+          </div>
+          <div class="menu-item__price">$36</div>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="50">
+        <div class="menu-item">
+          <div class="menu-item__info">
+            <div class="menu-item__name">Pan-Seared Sea Bass</div>
+            <div class="menu-item__desc">Saffron risotto, charred lemon, fennel</div>
+            <div class="menu-item__badges">
+              <span class="badge-allergen badge-gf">GF</span>
+            </div>
+          </div>
+          <div class="menu-item__price">$32</div>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="80">
+        <div class="menu-item">
+          <div class="menu-item__info">
+            <div class="menu-item__name">Wild Mushroom Risotto</div>
+            <div class="menu-item__desc">Truffle oil, aged parmesan, microgreens</div>
+            <div class="menu-item__badges">
+              <span class="badge-allergen badge-veg">V</span>
+              <span class="badge-allergen badge-gf">GF</span>
+            </div>
+          </div>
+          <div class="menu-item__price">$24</div>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="110">
+        <div class="menu-item">
+          <div class="menu-item__info">
+            <div class="menu-item__name">Grilled Ribeye</div>
+            <div class="menu-item__desc">Bone marrow butter, triple-cooked fries</div>
+            <div class="menu-item__badges"></div>
+          </div>
+          <div class="menu-item__price">$42</div>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="140">
+        <div class="menu-item">
+          <div class="menu-item__info">
+            <div class="menu-item__name">Slow-Braised Short Rib</div>
+            <div class="menu-item__desc">Celeriac purée, red wine reduction</div>
+            <div class="menu-item__badges">
+              <span class="badge-allergen badge-gf">GF</span>
+            </div>
+          </div>
+          <div class="menu-item__price">$30</div>
+        </div>
+      </div>
+
+      <div class="wine-pairing-box" data-aos="fade-up" data-aos-delay="160">
+        <div class="wine-pairing-box__label"><i class="bi bi-cup-straw"></i> Wine Pairing Suggestion</div>
+        <p class="wine-pairing-box__text">The lamb rack and ribeye are magnificent with a structured Grenache or Malbec. For the sea bass, a Burgundy-style Chardonnay or aged Verdicchio works beautifully.</p>
+      </div>
+    </section>
+
+    <!-- ====== DESSERTS ====== -->
+    <section class="menu-course" id="desserts" aria-label="Desserts">
+      <div class="course-heading" data-aos="fade-up">
+        <span class="course-heading__number">03</span>
+        <h2 class="course-heading__title">Desserts</h2>
+      </div>
+      <div class="course-divider"><span>◆</span></div>
+
+      <div data-aos="fade-up">
+        <div class="menu-item">
+          <div class="menu-item__info">
+            <div class="menu-item__name">Olive Oil Cake</div>
+            <div class="menu-item__desc">Citrus glaze, mascarpone cream</div>
+            <div class="menu-item__badges">
+              <span class="badge-allergen badge-veg">V</span>
+            </div>
+          </div>
+          <div class="menu-item__price">$12</div>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="50">
+        <div class="menu-item">
+          <div class="menu-item__info">
+            <div class="menu-item__name">Dark Chocolate Tart</div>
+            <div class="menu-item__desc">Sea salt, hazelnut crumble</div>
+            <div class="menu-item__badges">
+              <span class="badge-allergen badge-veg">V</span>
+            </div>
+          </div>
+          <div class="menu-item__price">$13</div>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="80">
+        <div class="menu-item">
+          <div class="menu-item__info">
+            <div class="menu-item__name">Seasonal Fruit Sorbet</div>
+            <div class="menu-item__desc">Rotating daily selection</div>
+            <div class="menu-item__badges">
+              <span class="badge-allergen badge-veg">V</span>
+              <span class="badge-allergen badge-vegan">VE</span>
+              <span class="badge-allergen badge-gf">GF</span>
+              <span class="badge-allergen badge-new">Daily</span>
+            </div>
+          </div>
+          <div class="menu-item__price">$9</div>
+        </div>
+      </div>
+
+      <div class="wine-pairing-box" data-aos="fade-up" data-aos-delay="100">
+        <div class="wine-pairing-box__label"><i class="bi bi-cup-straw"></i> Dessert Wine</div>
+        <p class="wine-pairing-box__text">The chocolate tart is stunning with a small glass of aged Pedro Ximénez. For the olive oil cake, ask about our current late-harvest Muscat.</p>
+      </div>
+    </section>
+
+    <!-- ====== WINE & BAR ====== -->
+    <section class="menu-course" id="wine-bar" aria-label="Wine and bar">
+      <div class="course-heading" data-aos="fade-up">
+        <span class="course-heading__number">04</span>
+        <h2 class="course-heading__title">Wine &amp; Bar</h2>
+      </div>
+      <div class="course-divider"><span>◆</span></div>
+
+      <div class="wine-bar-section" data-aos="fade-up">
+        <p style="color:rgba(250,246,238,0.7);font-size:0.9375rem;line-height:1.75;margin-bottom:1.5rem;">
+          Our wine list has been curated around small-production growers — mostly natural, biodynamic, or organic — from across Europe. We focus on producers with a genuine story to tell and wines that taste alive rather than just correct.
+        </p>
+        <p style="color:rgba(250,246,238,0.7);font-size:0.9375rem;line-height:1.75;">
+          The bar at Verde serves a full selection of cocktails built around seasonal flavours — house-made syrups, fresh citrus, and spirits from small distilleries. Ask for our current cocktail list. We also carry a selection of zero-alcohol alternatives and aperitifs.
+        </p>
+
+        <div class="wine-highlight">
+          <div class="wine-highlight__item">
+            <div class="wine-highlight__number">60+</div>
+            <div class="wine-highlight__label">Wines by Glass & Bottle</div>
+          </div>
+          <div class="wine-highlight__item">
+            <div class="wine-highlight__number">$14–$18</div>
+            <div class="wine-highlight__label">Signature Cocktails</div>
+          </div>
+          <div class="wine-highlight__item">
+            <div class="wine-highlight__number">8</div>
+            <div class="wine-highlight__label">Wines by the Glass</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIETARY INFO SECTION -->
+    <div class="dietary-section" data-aos="fade-up">
+      <span class="section-label">Dietary Information</span>
+      <p style="color:rgba(250,246,238,0.65);font-size:0.875rem;margin-top:0.5rem;">Our kitchen handles all major allergens. Please speak to your server before ordering.</p>
+      <div class="dietary-grid">
+        <div class="dietary-item">
+          <span class="badge-allergen badge-veg dietary-item__badge">V</span>
+          <span class="dietary-item__text">Suitable for vegetarians</span>
+        </div>
+        <div class="dietary-item">
+          <span class="badge-allergen badge-vegan dietary-item__badge">VE</span>
+          <span class="dietary-item__text">Suitable for vegans</span>
+        </div>
+        <div class="dietary-item">
+          <span class="badge-allergen badge-gf dietary-item__badge">GF</span>
+          <span class="dietary-item__text">Gluten-free option</span>
+        </div>
+        <div class="dietary-item">
+          <span class="badge-allergen badge-new dietary-item__badge">Daily</span>
+          <span class="dietary-item__text">Changes daily</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+<!-- end menu layout -->
+
+<!-- FOOTER -->
+<footer class="verde-footer" role="contentinfo">
+  <div class="container-verde">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="footer-wordmark">Verde</a>
+        <p class="footer-tagline">Modern Cooking, Honest Ingredients.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="footer-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading" data-i18n="footer.navigate">Navigate</div>
+        <nav class="footer-links">
+          <a href="index.html"          class="footer-link"><i class="bi bi-chevron-right"></i> Home</a>
+          <a href="menu.html"           class="footer-link"><i class="bi bi-chevron-right"></i> Menu</a>
+          <a href="about.html"          class="footer-link"><i class="bi bi-chevron-right"></i> About</a>
+          <a href="private-dining.html" class="footer-link"><i class="bi bi-chevron-right"></i> Private Dining</a>
+          <a href="events.html"         class="footer-link"><i class="bi bi-chevron-right"></i> Events</a>
+          <a href="reservations.html"   class="footer-link"><i class="bi bi-chevron-right"></i> Reservations</a>
+        </nav>
+      </div>
+      <div>
+        <div class="footer-heading">Hours</div>
+        <div class="footer-hours-row" data-day-check="Tuesday"><span>Tue – Thu</span><span>6:00 – 11:00 PM</span></div>
+        <div class="footer-hours-row" data-day-check="Friday"><span>Fri – Sat</span><span>5:30 PM – 12:00 AM</span></div>
+        <div class="footer-hours-row" data-day-check="Sunday"><span>Sunday</span><span>12:00 – 10:00 PM</span></div>
+        <div class="footer-hours-row" data-day-check="Monday"><span>Monday</span><span>Closed</span></div>
+      </div>
+      <div>
+        <div class="footer-heading">Contact</div>
+        <div class="footer-contact-item"><i class="bi bi-geo-alt footer-contact-icon"></i><span class="footer-contact-text">[Sample Address — Placeholder]</span></div>
+        <div class="footer-contact-item"><i class="bi bi-telephone footer-contact-icon"></i><span class="footer-contact-text">[Sample Phone — Placeholder]</span></div>
+        <div class="footer-contact-item"><i class="bi bi-envelope footer-contact-icon"></i><span class="footer-contact-text">hello@verderestaurant.com</span></div>
+        <div class="mt-3"><a href="reservations.html" class="btn-verde btn-secondary-verde btn-verde-sm" style="display:inline-flex;" data-i18n="btn.reserve">Reserve A Table</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copyright">© <span class="current-year"></span> Verde Restaurant.</span>
+      <p class="footer-disclaimer"><em>Demo template — all menu items and prices are fictional placeholder data.</em></p>
+      <div class="footer-legal-links">
+        <a href="#" class="footer-legal-link">Privacy</a>
+        <a href="contact.html" class="footer-legal-link">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+<div class="cookie-banner hidden" role="region" aria-label="Cookie consent">
+  <p>We use cookies for the best experience. <a href="#" style="color:var(--gold-light);" data-i18n="cookie.learn">Learn more</a></p>
+  <div class="cookie-actions">
+    <button class="btn-verde btn-secondary-verde btn-verde-sm js-cookie-decline" data-i18n="cookie.decline">Decline</button>
+    <button class="btn-verde btn-primary-verde btn-verde-sm js-cookie-accept" data-i18n="cookie.accept">Accept</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+// Sidebar active link on scroll
+(function() {
+  const sections = document.querySelectorAll('.menu-course[id]');
+  const links    = document.querySelectorAll('.menu-sidebar__link, .menu-pill-nav .pill');
+
+  function onScroll() {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 140) current = s.id;
+    });
+    links.forEach(l => {
+      l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+<script src="assets/js/translations.js"></script>
+</body>
+</html>
