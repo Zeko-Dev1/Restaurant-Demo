@@ -73,11 +73,11 @@ const VERDE_TRANSLATIONS = {
     'index.about.label': 'Our Story',
     'index.about.title': 'Where honest cooking<br />meets a considered table',
     'index.about.lead':  'Founded in 2015 by Chef Marko Ilievski, Your Restaurant was born from a simple belief: that the best meal is one that respects its ingredients, its seasons, and its guests.',
-    'index.about.body':  "We don't follow trends. We follow what grows. Our menu changes with the markets, driven by relationships with local farms and producers who share our values. Every dish on the table started as a conversation — with a farmer, a fisherman, a winemaker.",
+    'index.about.body':  "We don't follow trends. We follow what grows. Our menu changes with the markets, driven by relationships with local farms and producers who share our values. Every dish on the table started as a conversation — with a farmer, a fisherman, a grower.",
     'index.about.b1':    'Seasonal menus — updated weekly, not quarterly',
     'index.about.b2':    'Relationships with producers within 150km where possible',
     'index.about.b3':    '60 covers — intimate enough to cook with care',
-    'index.about.b4':    'Wine list built around small-production natural growers',
+    'index.about.b4':    'Seasonal drinks menu crafted to complement every dish',
 
     /* ---- INDEX chef ---- */
     'index.chef.label':  'The Kitchen',
@@ -273,11 +273,11 @@ const VERDE_TRANSLATIONS = {
     'index.about.label': 'Historia Jonë',
     'index.about.title': 'Ku gatimi i ndershëm<br />takon tryezën e menduar',
     'index.about.lead':  'I themeluar në vitin 2015 nga Shef Marko Ilievski, Restoranti lindi nga një besim i thjeshtë: se vakti më i mirë është ai që respekton përbërësit, stinët dhe mysafirët e tij.',
-    'index.about.body':  'Ne nuk ndjekim trendet. Ne ndjekim atë që rritet. Menyja jonë ndryshon me tregjet, e nxitur nga marrëdhëniet me fermat lokale dhe prodhuesit që ndajnë vlerat tona. Çdo pjatë në tavolinë filloi si një bisedë — me një fermer, një peshkatar, një prodhues vere.',
+    'index.about.body':  'Ne nuk ndjekim trendet. Ne ndjekim atë që rritet. Menyja jonë ndryshon me tregjet, e nxitur nga marrëdhëniet me fermat lokale dhe prodhuesit që ndajnë vlerat tona. Çdo pjatë në tavolinë filloi si një bisedë — me një fermer, një peshkatar, një kultivues.',
     'index.about.b1':    'Menyja sezonale — përditësohet çdo javë, jo çdo tremujor',
     'index.about.b2':    'Marrëdhënie me prodhuesit brenda 150km ku është e mundur',
     'index.about.b3':    '60 vende — mjaftueshëm intimate për të gatuar me kujdes',
-    'index.about.b4':    'Lista e verërave e ndërtuar rreth prodhuesve të vegjël natyrorë',
+    'index.about.b4':    'Meny pijesh sezonale e krijuar për të plotësuar çdo pjatë',
 
     /* ---- INDEX chef ---- */
     'index.chef.label':  'Kuzhina',
@@ -472,11 +472,11 @@ const VERDE_TRANSLATIONS = {
     'index.about.label': 'Нашата Приказна',
     'index.about.title': 'Каде чесното готвење<br />се среќава со промислена трпеза',
     'index.about.lead':  'Основан во 2015 година од Готвачот Марко Илиевски, Ресторанот е роден од едноставно верување: дека најдобриот оброк е оној кој ги почитува состојките, сезоните и своите гости.',
-    'index.about.body':  'Не следиме трендови. Ние следиме она што расте. Нашето мени се менува со пазарите, водено од односите со локалните фарми и производители кои ги споделуваат нашите вредности. Секое јадење на трпезата почнало како разговор — со фармер, рибар, производител на вино.',
+    'index.about.body':  'Не следиме трендови. Ние следиме она што расте. Нашето мени се менува со пазарите, водено од односите со локалните фарми и производители кои ги споделуваат нашите вредности. Секое јадење на трпезата почнало како разговор — со фармер, рибар, одгледувач.',
     'index.about.b1':    'Сезонски менија — ажурирани неделно, а не квартално',
     'index.about.b2':    'Односи со производители во рамките на 150км каде е можно',
     'index.about.b3':    '60 места — доволно интимно за да се готви со грижа',
-    'index.about.b4':    'Листа на вина изградена околу мали природни производители',
+    'index.about.b4':    'Сезонско мени со пијалоци создадено да го надополни секое јадење',
 
     /* ---- INDEX chef ---- */
     'index.chef.label':  'Кујната',
