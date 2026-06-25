@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Verde Restaurant — forms.js
+   Restaurant — forms.js
    Universal form validation: contact, private dining, newsletter
    DEMO TEMPLATE — Forms are simulated. Ready to connect to a real backend.
    ========================================================================== */
@@ -308,7 +308,7 @@ function initPrivateDiningForm() {
     showFormSuccess(
       form,
       'Enquiry submitted.',
-      'Our events team will be in touch within 24 hours to discuss your private dining experience at Verde.'
+      'Our events team will be in touch within 24 hours to discuss your private dining experience.'
     );
 
     submitting = false;

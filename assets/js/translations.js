@@ -1,5 +1,5 @@
-/* ==========================================================================
-   Verde Restaurant — translations.js
+﻿/* ==========================================================================
+   Restaurant — translations.js
    Albanian (sq) + Macedonian (mk) language support
    ========================================================================== */
 
@@ -72,11 +72,20 @@ const VERDE_TRANSLATIONS = {
     /* ---- INDEX about split ---- */
     'index.about.label': 'Our Story',
     'index.about.title': 'Where honest cooking<br />meets a considered table',
-    'index.about.lead':  'Founded in 2015 by Chef Marko Ilievski, Verde was born from a simple belief: that the best meal is one that respects its ingredients, its seasons, and its guests.',
+    'index.about.lead':  'Founded in 2015 by Chef Marko Ilievski, Your Restaurant was born from a simple belief: that the best meal is one that respects its ingredients, its seasons, and its guests.',
+    'index.about.body':  "We don't follow trends. We follow what grows. Our menu changes with the markets, driven by relationships with local farms and producers who share our values. Every dish on the table started as a conversation — with a farmer, a fisherman, a winemaker.",
+    'index.about.b1':    'Seasonal menus — updated weekly, not quarterly',
+    'index.about.b2':    'Relationships with producers within 150km where possible',
+    'index.about.b3':    '60 covers — intimate enough to cook with care',
+    'index.about.b4':    'Wine list built around small-production natural growers',
 
     /* ---- INDEX chef ---- */
     'index.chef.label':  'The Kitchen',
     'index.chef.title':  'Cooking from<br />the ground up',
+    'index.chef.body1':  'Chef Marko Ilievski trained across kitchens in Lyon, Copenhagen, and Barcelona before returning home to open Your Restaurant in 2015. His cooking is deeply rooted in the produce itself — minimal intervention, maximum clarity of flavour.',
+    'index.chef.body2':  'Working closely with Sous Chef Elena Petrov, the kitchen at Your Restaurant operates with a rare combination of precision and warmth. Dishes are designed to be genuinely delicious — never clever for its own sake.',
+    'index.chef.quote':  "The best thing I can do with a perfect piece of fish is get out of its way. Seasoning, heat, and a plate that lets it speak. That's cooking.",
+    'index.chef.cite':   '— Chef Marko Ilievski',
 
     /* ---- INDEX menu preview ---- */
     'index.menu.label':  'The Menu',
@@ -99,10 +108,21 @@ const VERDE_TRANSLATIONS = {
     'index.news.title':    'Seasonal menus. Special events. No noise.',
     'index.news.input':    'Your email address',
 
+    /* ---- INDEX reservation widget ---- */
+    'index.widget.title':    'Reserve Your Table',
+    'index.widget.subtitle': 'For full options and special requests, use the reservations page.',
+    'index.widget.date':     'Date',
+    'index.widget.guests':   'Guests',
+    'index.widget.note':     'Closed Mondays. For parties of 10+, please call us directly.',
+
+    /* ---- INDEX events + press previews ---- */
+    'index.events.title': 'Upcoming Events',
+    'index.press.label':  'As Featured In',
+
     /* ---- ABOUT hero ---- */
     'about.hero.label':    'Our Story',
     'about.hero.title':    'Cooking with conviction<br />since 2015',
-    'about.hero.lead':     'Verde was founded on a single belief: that a great meal starts long before it reaches the table — with the relationships, the seasons, and the hands that grow the food.',
+    'about.hero.lead':     'Your Restaurant was founded on a single belief: that a great meal starts long before it reaches the table — with the relationships, the seasons, and the hands that grow the food.',
 
     /* ---- ABOUT sections ---- */
     'about.story.label':   'The Beginning',
@@ -131,7 +151,7 @@ const VERDE_TRANSLATIONS = {
     /* ---- PRIVATE DINING hero ---- */
     'pd.hero.label': 'Private Dining',
     'pd.hero.title': 'Your own table.<br />Your own evening.',
-    'pd.hero.lead':  'Whether a birthday, an anniversary, a team dinner, or simply a reason to gather around something special — Verde\'s private spaces are designed for moments that matter.',
+    'pd.hero.lead':  'Whether a birthday, an anniversary, a team dinner, or simply a reason to gather around something special — our private spaces are designed for moments that matter.',
     'pd.hero.btn2':  'See Our Spaces',
     'pd.hero.t1':    'Responds within 24 hours',
     'pd.hero.t2':    'Bespoke menus with Chef Marko',
@@ -157,12 +177,12 @@ const VERDE_TRANSLATIONS = {
     'pd.form.title':   'Enquire about private dining',
 
     /* ---- EVENTS hero ---- */
-    'events.hero.label': 'At Verde',
+    'events.hero.label': 'At Your Restaurant',
     'events.hero.title': 'Events worth clearing<br />the calendar for',
 
     /* ---- GALLERY hero ---- */
     'gallery.hero.label': 'Gallery',
-    'gallery.hero.title': 'A glimpse inside Verde',
+    'gallery.hero.title': 'A glimpse inside Your Restaurant',
     'gallery.filter.all':      'All',
     'gallery.filter.food':     'Food',
     'gallery.filter.interior': 'Interior',
@@ -174,8 +194,17 @@ const VERDE_TRANSLATIONS = {
     'contact.hero.title': 'We\'d love to<br />hear from you',
     'contact.send':       'Send Message',
 
+    /* ---- RESERVATIONS hero ---- */
+    'res.hero.label': 'Reservations',
+    'res.hero.title': 'Reserve your table<br />at Your Restaurant',
+    'res.hero.lead':  'We open Tuesday through Sunday. Monday we rest. Select your date and we\'ll find you the perfect seat.',
+
+    /* ---- PRESS hero ---- */
+    'press.hero.label': 'Press & Recognition',
+    'press.hero.title': 'What the world<br />is saying about Your Restaurant',
+
     /* ---- MENU hero ---- */
-    'menu.label':  'Verde · Seasonal Menu',
+    'menu.label':  'Your Restaurant · Seasonal Menu',
     'menu.title':  'The Menu',
     'menu.lead':   'Driven by what grows well and what tastes right. Our menu changes weekly — this is our current selection.',
   },
@@ -243,11 +272,20 @@ const VERDE_TRANSLATIONS = {
     /* ---- INDEX about split ---- */
     'index.about.label': 'Historia Jonë',
     'index.about.title': 'Ku gatimi i ndershëm<br />takon tryezën e menduar',
-    'index.about.lead':  'I themeluar në vitin 2015 nga Shef Marko Ilievski, Verde lindi nga një besim i thjeshtë: se vakti më i mirë është ai që respekton përbërësit, stinët dhe mysafirët e tij.',
+    'index.about.lead':  'I themeluar në vitin 2015 nga Shef Marko Ilievski, Restoranti lindi nga një besim i thjeshtë: se vakti më i mirë është ai që respekton përbërësit, stinët dhe mysafirët e tij.',
+    'index.about.body':  'Ne nuk ndjekim trendet. Ne ndjekim atë që rritet. Menyja jonë ndryshon me tregjet, e nxitur nga marrëdhëniet me fermat lokale dhe prodhuesit që ndajnë vlerat tona. Çdo pjatë në tavolinë filloi si një bisedë — me një fermer, një peshkatar, një prodhues vere.',
+    'index.about.b1':    'Menyja sezonale — përditësohet çdo javë, jo çdo tremujor',
+    'index.about.b2':    'Marrëdhënie me prodhuesit brenda 150km ku është e mundur',
+    'index.about.b3':    '60 vende — mjaftueshëm intimate për të gatuar me kujdes',
+    'index.about.b4':    'Lista e verërave e ndërtuar rreth prodhuesve të vegjël natyrorë',
 
     /* ---- INDEX chef ---- */
     'index.chef.label':  'Kuzhina',
     'index.chef.title':  'Gatim nga<br />themelet',
+    'index.chef.body1':  'Kuzhinieri Marko Ilievski u trajnua në kuzhina në Lyon, Kopenhagen dhe Barcelonë para se të kthehej në shtëpi për të hapur Restorantin Tonë në 2015. Gatimi i tij është i rrënjosur thellë në vetë produktet — ndërhyrje minimale, qartësi maksimale e shijes.',
+    'index.chef.body2':  'Duke punuar ngushtë me Sous Chef Elena Petrov, kuzhina jonë funksionon me një kombinim të rrallë precizioni dhe ngrohtësie. Pjatat janë projektuar të jenë vërtet të shijshme — kurrë të mprehta për vetë mprehjen.',
+    'index.chef.quote':  'Gjëja më e mirë që mund të bëj me një copë peshku të përsosur është të tërhiqem mënjanë. Erëza, nxehtësi dhe një pjatë që e lë të flasë. Kjo është kuzhina.',
+    'index.chef.cite':   '— Kuzhinieri Marko Ilievski',
 
     /* ---- INDEX menu preview ---- */
     'index.menu.label':  'Menyja',
@@ -270,10 +308,21 @@ const VERDE_TRANSLATIONS = {
     'index.news.title':    'Menytë sezonale. Ngjarje speciale. Pa zhurmë.',
     'index.news.input':    'Adresa juaj e emailit',
 
+    /* ---- INDEX reservation widget ---- */
+    'index.widget.title':    'Rezervo Tavolinën Tënde',
+    'index.widget.subtitle': 'Për opsione të plota dhe kërkesa të veçanta, përdorni faqen e rezervimeve.',
+    'index.widget.date':     'Data',
+    'index.widget.guests':   'Mysafirët',
+    'index.widget.note':     'Mbyllur të Hënave. Për grupe 10+, ju lutemi na telefononi drejtpërdrejt.',
+
+    /* ---- INDEX events + press previews ---- */
+    'index.events.title': 'Ngjarjet e Ardhshme',
+    'index.press.label':  'E Raportuar Nga',
+
     /* ---- ABOUT hero ---- */
     'about.hero.label':    'Historia Jonë',
     'about.hero.title':    'Gatim me bindje<br />që nga viti 2015',
-    'about.hero.lead':     'Verde u themelua mbi një besim të vetëm: se një vakt i madh fillon shumë para se të arrijë në tryezë — me marrëdhëniet, stinët dhe duart që rrisin ushqimin.',
+    'about.hero.lead':     'Restoranti u themelua mbi një besim të vetëm: se një vakt i madh fillon shumë para se të arrijë në tryezë — me marrëdhëniet, stinët dhe duart që rrisin ushqimin.',
 
     /* ---- ABOUT sections ---- */
     'about.story.label':   'Fillimi',
@@ -302,7 +351,7 @@ const VERDE_TRANSLATIONS = {
     /* ---- PRIVATE DINING ---- */
     'pd.hero.label': 'Darkë Private',
     'pd.hero.title': 'Tryeza jote.<br />Mbrëmja jote.',
-    'pd.hero.lead':  'Qoftë ditëlindje, përvjetor, darkë ekipi ose thjesht arsye për t\'u mbledhur — hapësirat private të Verde janë krijuar për momente të veçanta.',
+    'pd.hero.lead':  'Qoftë ditëlindje, përvjetor, darkë ekipi ose thjesht arsye për t\'u mbledhur — hapësirat tona private janë krijuar për momente të veçanta.',
     'pd.hero.btn2':  'Shiko Hapësirat Tona',
     'pd.hero.t1':    'Përgjigjet brenda 24 orësh',
     'pd.hero.t2':    'Menytë me porosi me Shef Markon',
@@ -327,12 +376,12 @@ const VERDE_TRANSLATIONS = {
     'pd.form.title':   'Pyesni për darkën private',
 
     /* ---- EVENTS ---- */
-    'events.hero.label': 'Në Verde',
+    'events.hero.label': 'Në Restorantin Tonë',
     'events.hero.title': 'Ngjarje për të cilat ia vlen<br />të lironi kalendarin',
 
     /* ---- GALLERY ---- */
     'gallery.hero.label': 'Galeria',
-    'gallery.hero.title': 'Një vështrim brenda Verde',
+    'gallery.hero.title': 'Një vështrim brenda Restorantit Tonë',
     'gallery.filter.all':      'Të Gjitha',
     'gallery.filter.food':     'Ushqim',
     'gallery.filter.interior': 'Interier',
@@ -344,8 +393,17 @@ const VERDE_TRANSLATIONS = {
     'contact.hero.title': 'Do të donim<br />të dëgjonim nga ju',
     'contact.send':       'Dërgo Mesazh',
 
+    /* ---- RESERVATIONS hero ---- */
+    'res.hero.label': 'Rezervime',
+    'res.hero.title': 'Rezervoni tryezën tuaj<br />në Restorantin Tonë',
+    'res.hero.lead':  'Hapim nga e Marta deri të Dielën. Të Hënën pushojmë. Zgjidhni datën dhe do t\'ju gjejmë vendin perfekt.',
+
+    /* ---- PRESS hero ---- */
+    'press.hero.label': 'Shtyp &amp; Njohje',
+    'press.hero.title': 'Çfarë thotë bota<br />për Restorantin Tonë',
+
     /* ---- MENU ---- */
-    'menu.label':  'Verde · Menyja Sezonale',
+    'menu.label':  'Restoranti Ynë · Menyja Sezonale',
     'menu.title':  'Menyja',
     'menu.lead':   'Nën drejtimin e asaj që rritet mirë dhe ka shije të mirë. Menyja jonë ndryshon çdo javë — ky është përzgjedhja jonë aktuale.',
   },
@@ -413,11 +471,20 @@ const VERDE_TRANSLATIONS = {
     /* ---- INDEX about split ---- */
     'index.about.label': 'Нашата Приказна',
     'index.about.title': 'Каде чесното готвење<br />се среќава со промислена трпеза',
-    'index.about.lead':  'Основан во 2015 година од Готвачот Марко Илиевски, Верде е роден од едноставно верување: дека најдобриот оброк е оној кој ги почитува состојките, сезоните и своите гости.',
+    'index.about.lead':  'Основан во 2015 година од Готвачот Марко Илиевски, Ресторанот е роден од едноставно верување: дека најдобриот оброк е оној кој ги почитува состојките, сезоните и своите гости.',
+    'index.about.body':  'Не следиме трендови. Ние следиме она што расте. Нашето мени се менува со пазарите, водено од односите со локалните фарми и производители кои ги споделуваат нашите вредности. Секое јадење на трпезата почнало како разговор — со фармер, рибар, производител на вино.',
+    'index.about.b1':    'Сезонски менија — ажурирани неделно, а не квартално',
+    'index.about.b2':    'Односи со производители во рамките на 150км каде е можно',
+    'index.about.b3':    '60 места — доволно интимно за да се готви со грижа',
+    'index.about.b4':    'Листа на вина изградена околу мали природни производители',
 
     /* ---- INDEX chef ---- */
     'index.chef.label':  'Кујната',
     'index.chef.title':  'Готвење од<br />основите',
+    'index.chef.body1':  'Главниот готвач Марко Илиевски се обучувал во кујни во Лион, Копенхаген и Барселона пред да се врати дома и да го отвори Ресторанот во 2015. Неговото готвење е длабоко вкоренето во самите состојки — минимална интервенција, максимална јасност на вкусот.',
+    'index.chef.body2':  'Работејќи во тесна соработка со помошниот готвач Елена Петров, нашата кујна работи со редок спој на прецизност и топлина. Јадењата се дизајнирани да бидат навистина вкусни — никогаш паметни за самата паметност.',
+    'index.chef.quote':  'Најдоброто нешто што можам да направам со совршено парче риба е да се тргнам на страна. Зачини, топлина и чинија која го остава да зборува. Тоа е готвење.',
+    'index.chef.cite':   '— Главен Готвач Марко Илиевски',
 
     /* ---- INDEX menu preview ---- */
     'index.menu.label':  'Менито',
@@ -440,10 +507,21 @@ const VERDE_TRANSLATIONS = {
     'index.news.title':    'Сезонски менија. Специјални настани. Без шум.',
     'index.news.input':    'Вашата е-маил адреса',
 
+    /* ---- INDEX reservation widget ---- */
+    'index.widget.title':    'Резервирај Своја Маса',
+    'index.widget.subtitle': 'За целосни опции и специјални барања, користете ја страницата за резервации.',
+    'index.widget.date':     'Датум',
+    'index.widget.guests':   'Гости',
+    'index.widget.note':     'Затворено во понеделник. За групи 10+, ве молиме јавете ни се директно.',
+
+    /* ---- INDEX events + press previews ---- */
+    'index.events.title': 'Претстојни Настани',
+    'index.press.label':  'Споменато Во',
+
     /* ---- ABOUT hero ---- */
     'about.hero.label':    'Нашата Приказна',
     'about.hero.title':    'Готвење со убедување<br />од 2015 година',
-    'about.hero.lead':     'Верде е основан врз едно верување: дека одличен оброк почнува долго пред да стигне на трпезата — со односите, сезоните и рацете кои го одгледуваат храната.',
+    'about.hero.lead':     'Ресторанот е основан врз едно верување: дека одличен оброк почнува долго пред да стигне на трпезата — со односите, сезоните и рацете кои го одгледуваат храната.',
 
     /* ---- ABOUT sections ---- */
     'about.story.label':   'Почетокот',
@@ -472,7 +550,7 @@ const VERDE_TRANSLATIONS = {
     /* ---- PRIVATE DINING ---- */
     'pd.hero.label': 'Приватна Вечера',
     'pd.hero.title': 'Твојата маса.<br />Твојата вечер.',
-    'pd.hero.lead':  'Без разлика дали е роденден, годишнина, тимска вечера или едноставно причина да се соберете — приватните простори на Верде се создадени за моменти кои имаат значење.',
+    'pd.hero.lead':  'Без разлика дали е роденден, годишнина, тимска вечера или едноставно причина да се соберете — нашите приватни простори се создадени за моменти кои имаат значење.',
     'pd.hero.btn2':  'Погледни Ги Нашите Простори',
     'pd.hero.t1':    'Одговара во рок од 24 часа',
     'pd.hero.t2':    'Менија по нарачка со Готвачот Марко',
@@ -497,12 +575,12 @@ const VERDE_TRANSLATIONS = {
     'pd.form.title':   'Прашајте за приватна вечера',
 
     /* ---- EVENTS ---- */
-    'events.hero.label': 'Во Верде',
+    'events.hero.label': 'Во Вашиот Ресторан',
     'events.hero.title': 'Настани вредни да го<br />исчистите календарот',
 
     /* ---- GALLERY ---- */
     'gallery.hero.label': 'Галерија',
-    'gallery.hero.title': 'Поглед внатре во Верде',
+    'gallery.hero.title': 'Поглед внатре во Вашиот Ресторан',
     'gallery.filter.all':      'Сите',
     'gallery.filter.food':     'Храна',
     'gallery.filter.interior': 'Ентериер',
@@ -514,8 +592,17 @@ const VERDE_TRANSLATIONS = {
     'contact.hero.title': 'Би сакале<br />да слушнеме од вас',
     'contact.send':       'Испрати Порака',
 
+    /* ---- RESERVATIONS hero ---- */
+    'res.hero.label': 'Резервации',
+    'res.hero.title': 'Резервирајте маса<br />во Вашиот Ресторан',
+    'res.hero.lead':  'Отворени вторник до недела. Понеделник одмараме. Изберете датум и ќе ви најдеме совршено место.',
+
+    /* ---- PRESS hero ---- */
+    'press.hero.label': 'Прес &amp; Признанија',
+    'press.hero.title': 'Што светот<br />зборува за Вашиот Ресторан',
+
     /* ---- MENU ---- */
-    'menu.label':  'Верде · Сезонско Мени',
+    'menu.label':  'Вашиот Ресторан · Сезонско Мени',
     'menu.title':  'Менито',
     'menu.lead':   'Водено од она што расте добро и има добар вкус. Нашето мени се менува неделно — ова е нашиот тековен избор.',
   },

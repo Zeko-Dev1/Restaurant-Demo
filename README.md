@@ -1,4 +1,4 @@
-# Verde Restaurant — Premium Website Demo Template
+# Restaurant — Premium Website Demo Template
 
 > **This is a design demonstration template** built to show a real local restaurant owner what a modern, premium custom website could look like — without the need for a €10,000 agency contract.
 
@@ -6,7 +6,7 @@
 
 ## What This Is
 
-Verde is a fully-built, pixel-perfect restaurant website template — 10 complete HTML pages, 4 CSS files, and 5 JavaScript files — designed to look and feel like a genuinely expensive custom build.
+This is a fully-built, pixel-perfect restaurant website template — 10 complete HTML pages, 4 CSS files, and 5 JavaScript files — designed to look and feel like a genuinely expensive custom build.
 
 The design philosophy: **modern European, not dated fine-dining**. Deep forest green, warm gold accents, and soft cream tones replace the tired black-and-gold cliché. Typography is editorial and warm (Fraunces + Work Sans). Every button works. Every form validates. The reservation system generates real confirmation numbers. The open/closed status updates dynamically based on actual time.
 
@@ -78,7 +78,7 @@ The site works by opening `index.html` directly, but some animation timing works
 ## File Structure
 
 ```
-verde-restaurant/
+/
 ├── index.html              ← Home page
 ├── about.html
 ├── menu.html
@@ -116,7 +116,7 @@ Replace the following placeholder content with the real restaurant's actual deta
 - [ ] **Tagline** — "Modern Cooking, Honest Ingredients"
 - [ ] **Address** — all instances of `[Sample Street Address — Placeholder]`
 - [ ] **Phone number** — all instances of `[Sample Phone — Placeholder]`
-- [ ] **Email address** — `hello@verderestaurant.com`
+- [ ] **Email address** — `hello@yourrestaurant.com`
 - [ ] **Chef and staff names** — Marko Ilievski, Elena Petrov, Ana Dimovska
 - [ ] **Menu items, descriptions, and prices** — all fictional placeholders
 - [ ] **Opening hours** — update in `main.js` (OPENING_HOURS object) AND in all HTML files

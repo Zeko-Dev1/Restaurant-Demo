@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Verde Restaurant — reservation.js
+   Restaurant — reservation.js
    Reservation form: validation, time slots, confirmation
    DEMO TEMPLATE — All content is fictional. Not connected to a real booking
    system. Confirmation numbers are simulated only.
@@ -90,7 +90,7 @@ function validateDate(input) {
   const dayOfWeek = selected.getDay();
 
   if (dayOfWeek === 1) {
-    setFieldError(input, 'Verde is closed on Mondays. Please choose another day.');
+    setFieldError(input, 'We are closed on Mondays. Please choose another day.');
     return false;
   }
 

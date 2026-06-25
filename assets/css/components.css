@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Verde Restaurant — components.css
+   Restaurant — components.css
    Navbar, buttons, cards, footer, widgets, and UI components
    DEMO TEMPLATE — All content is fictional placeholder data
    ========================================================================== */
@@ -28,21 +28,22 @@
 .verde-navbar.nav-scrolled {
   background:   var(--cream);
   padding:      1rem 0;
-  border-color: rgba(193, 154, 75, 0.3);
-  box-shadow:   var(--shadow-sm);
+  border-color: rgba(193, 154, 75, 0.45);
+  box-shadow:   0 4px 20px rgba(31, 58, 46, 0.13);
 }
 
 /* ------------------------------------------------------------------
    Light nav variant — for pages whose hero has a dark forest background.
    Add class "verde-navbar--light" to <nav> on those pages.
    In nav-top state: cream text. In nav-scrolled state: override to dark.
+   Note: 4-class selectors outrank 3-class base rules regardless of order.
    ------------------------------------------------------------------ */
-.verde-navbar--light.nav-top .nav-wordmark             { color: var(--cream); }
-.verde-navbar--light.nav-top .nav-link-item            { color: rgba(250,246,238,0.8); }
-.verde-navbar--light.nav-top .nav-link-item:hover,
-.verde-navbar--light.nav-top .nav-link-item.active     { color: var(--cream); }
-.verde-navbar--light.nav-top .nav-reserve-btn          { color: var(--gold); border-color: rgba(193,154,75,0.65); }
-.verde-navbar--light.nav-top .nav-hamburger span       { background: var(--cream); }
+.verde-navbar.verde-navbar--light.nav-top .nav-wordmark             { color: var(--cream); }
+.verde-navbar.verde-navbar--light.nav-top .nav-link-item            { color: rgba(250,246,238,0.8); }
+.verde-navbar.verde-navbar--light.nav-top .nav-link-item:hover,
+.verde-navbar.verde-navbar--light.nav-top .nav-link-item.active     { color: var(--cream); }
+.verde-navbar.verde-navbar--light.nav-top .nav-reserve-btn          { color: var(--gold); border-color: rgba(193,154,75,0.65); }
+.verde-navbar.verde-navbar--light.nav-top .nav-hamburger span       { background: var(--cream); }
 
 /* When scrolled, ALWAYS dark — overrides any inline styles or variant */
 .verde-navbar.nav-scrolled .nav-wordmark               { color: var(--forest) !important; }
@@ -73,9 +74,7 @@
   transition:     color var(--t-fast);
 }
 
-.verde-navbar.nav-top .nav-wordmark {
-  color: var(--forest);
-}
+/* base wordmark colour is already set above — removed redundant nav-top override */
 
 .verde-navbar .nav-wordmark:hover {
   color:           var(--gold);
@@ -160,17 +159,17 @@
 }
 
 .nav-hamburger span {
-  display:       block;
-  width:         24px;
-  height:        1.5px;
-  background:    var(--forest);
-  border-radius: var(--radius-full);
-  transition:    transform var(--t-base), opacity var(--t-fast), width var(--t-base);
-  transform-origin: left;
+  display:          block;
+  width:            24px;
+  height:           1.5px;
+  background:       var(--forest);
+  border-radius:    var(--radius-full);
+  transition:       transform var(--t-base), opacity var(--t-fast), width var(--t-base);
+  transform-origin: center;
 }
 
 .nav-hamburger.open span:nth-child(1) {
-  transform: rotate(45deg) translateY(-1px);
+  transform: translateY(6.5px) rotate(45deg);
 }
 
 .nav-hamburger.open span:nth-child(2) {
@@ -179,7 +178,7 @@
 }
 
 .nav-hamburger.open span:nth-child(3) {
-  transform: rotate(-45deg) translateY(1px);
+  transform: translateY(-6.5px) rotate(-45deg);
 }
 
 /* Mobile drawer */

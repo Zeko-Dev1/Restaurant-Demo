@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Verde Restaurant — main.js
+   Restaurant — main.js
    Core site JavaScript: loader, navbar, scroll, AOS, lightbox, status
    DEMO TEMPLATE — All content is fictional placeholder data
    ========================================================================== */

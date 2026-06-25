@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Verde Restaurant — counters.js
+   Restaurant — counters.js
    Animated counter with Intersection Observer trigger
    DEMO TEMPLATE — All content is fictional placeholder data
    ========================================================================== */

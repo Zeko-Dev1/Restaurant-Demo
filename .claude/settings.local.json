@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Select-String -Path \"c:\\\\Users\\\\arbin\\\\Desktop\\\\Project\\\\Restaurant Website\\\\verde-restaurant\\\\assets\\\\js\\\\translations.js\" -Pattern 'Verde' -CaseSensitive | ForEach-Object { Write-Host \"$\\($_.LineNumber\\): $\\($_.Line.Trim\\(\\)\\)\" })",
+      "PowerShell(Select-String -Path \"c:\\\\Users\\\\arbin\\\\Desktop\\\\Project\\\\Restaurant Website\\\\verde-restaurant\\\\assets\\\\js\\\\translations.js\" -Pattern 'Верде' | ForEach-Object { Write-Host \"$\\($_.LineNumber\\): $\\($_.Line.Trim\\(\\)\\)\" })"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\arbin\\.claude\\projects\\c--Users-arbin-Desktop-Project-Restaurant-Website\\memory"
+    ]
+  }
+}
